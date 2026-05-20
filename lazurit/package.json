@@ -1,0 +1,13 @@
+{
+  "name": "lazurit",
+  "version": "1.0.0",
+  "description": "ЛАЗУРИТ — ювелирный интернет-магазин",
+  "scripts": {
+    "build:css": "sass css/style.scss css/style.css --style=expanded",
+    "watch:css": "sass --watch css/style.scss:css/style.css",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
