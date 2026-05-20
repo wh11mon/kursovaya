@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <categories>
+    <category id="rings">Кольца</category>
+    <category id="earrings">Серьги</category>
+    <category id="necklaces">Колье</category>
+    <category id="bracelets">Браслеты</category>
+  </categories>
+
+  <products>
+    <!-- Существующие товары -->
+    <product id="1" category="rings">
+      <n>Тройное кольцо</n>
+      <price>145000</price>
+      <material>Золото 585, бриллианты</material>
+      <description>Изысканное тройное кольцо из золота 585 пробы с россыпью бриллиантов огранки «круг». Идеально для особых случаев.</description>
+      <image>../images/product_ring_triple.webp</image>
+    </product>
+    <product id="2" category="rings">
+      <n>Обручальные кольца</n>
+      <price>210000</price>
+      <material>Платина, бриллианты</material>
+      <description>Пара обручальных колец из платины 950 пробы. Символ вечной любви и преданности.</description>
+      <image>../images/product_ring_gold_pearl.png</image>
+    </product>
+    <product id="3" category="earrings">
+      <n>Серьги с бриллиантами</n>
+      <price>165000</price>
+      <material>Золото 750, бриллианты</material>
+      <description>Элегантные серьги из белого золота 750 пробы с бриллиантами огранки «принцесса».</description>
+      <image>../images/product_earrings_pearl_silver.png</image>
+    </product>
+    <product id="4" category="earrings">
+      <n>Изящные серьги</n>
+      <price>115000</price>
+      <material>Золото 585, сапфиры</material>
+      <description>Утончённые серьги с сапфирами насыщенного синего цвета. Ручная работа мастера.</description>
+      <image>../images/product_earrings_gold_pearl.png</image>
+    </product>
+    <product id="7" category="necklaces">
+      <n>Золотое колье</n>
+      <price>190000</price>
+      <material>Золото 750, бриллианты</material>
+      <description>Роскошное колье из золота 750 пробы с бриллиантовой подвеской. Длина цепочки 42 см.</description>
+      <image>../images/product_necklace_gold_pearl.png</image>
+    </product>
+    <product id="8" category="bracelets">
+      <n>Браслет с бриллиантами</n>
+      <price>155000</price>
+      <material>Золото 585, бриллианты</material>
+      <description>Изящный браслет-«теннис» из золота 585 пробы с дорожкой бриллиантов.</description>
+      <image>../images/product_bracelet_diamonds.jpg</image>
+    </product>
+
+    <!-- Новые товары с загруженными фото -->
+    <product id="9" category="earrings">
+      <n>Серьги с барочным жемчугом и изумрудами</n>
+      <price>178000</price>
+      <material>Серебро 925, барочный жемчуг, изумруды</material>
+      <description>Эффектные серьги с крупным барочным жемчугом и вставками натуральных изумрудов. Каждая жемчужина уникальна по форме и перламутровому блеску. Замки украшены россыпью бриллиантов.</description>
+      <image>../images/product_earrings_pearl_silver.webp</image>
+    </product>
+    <product id="10" category="rings">
+      <n>Кольцо «Двойной жемчуг» в золоте</n>
+      <price>225000</price>
+      <material>Золото 750, жемчуг Акоя</material>
+      <description>Скульптурное кольцо-разомкнутое с двумя жемчужинами Акоя в органической оправе из золота 750 пробы. Авторская работа, вдохновлённая природными формами. Размер регулируется.</description>
+      <image>../images/product_ring_gold_pearl.webp</image>
+    </product>
+    <product id="11" category="earrings">
+      <n>Серьги-медальоны с жемчугом и бриллиантами</n>
+      <price>312000</price>
+      <material>Серебро 925, жемчуг, бриллианты</material>
+      <description>Монументальные серьги-медальоны в форме овала с ажурным переплетением жемчужин и бриллиантов. Диаметр подвески 5 см. Изысканное украшение для вечернего выхода.</description>
+      <image>../images/product_earrings_oval_silver.png</image>
+    </product>
+    <product id="12" category="necklaces">
+      <n>Колье «Золотой сад» с жемчугом</n>
+      <price>267000</price>
+      <material>Золото 585, жемчуг, топазы</material>
+      <description>Многоярусное колье из золотой цепочки с пресноводным жемчугом и вставками топазов. Длина 80 см. Два ряда создают эффект объёма и роскоши. Идеально дополнит вечерний образ.</description>
+      <image>../images/product_necklace_gold_pearl.webp</image>
+    </product>
+    <product id="13" category="necklaces">
+      <n>Колье «Серебряная нить» с жемчугом</n>
+      <price>198000</price>
+      <material>Серебро 925, жемчуг, марказиты</material>
+      <description>Двухрядное колье из серебра с жемчужинами и вставками марказитов. Длина 78 см. Элегантная игра металла и жемчуга создаёт утончённый образ. Замок в виде карабина с логотипом.</description>
+      <image>../images/product_necklace_silver_pearl.png</image>
+    </product>
+    <product id="14" category="earrings">
+      <n>Серьги «Золотой купол» с жемчугом</n>
+      <price>245000</price>
+      <material>Золото 750, барочный жемчуг, бриллианты</material>
+      <description>Роскошные серьги с барочными жемчужинами в куполообразной оправе из золота 750 пробы с россыпью бриллиантов. Вставки чёрных бриллиантов создают контрастный акцент. Ручная работа.</description>
+      <image>../images/product_earrings_gold_pearl.webp</image>
+    </product>
+    <product id="15" category="rings">
+      <n>Кольцо «Сердца» из стали</n>
+      <price>48000</price>
+      <material>Хирургическая сталь 316L</material>
+      <description>Широкое кольцо из хирургической стали с ажурным узором из сердец. Гравировка внутри с авторской подписью. Гипоаллергенный материал, не теряет блеск со временем. Унисекс-модель.</description>
+      <image>../images/product_ring_silver_hearts.webp</image>
+    </product>
+  </products>
+
+  <reviews>
+    <review id="1">
+      <author>Анна Петрова</author>
+      <rating>5</rating>
+      <text>Невероятной красоты кольцо! Качество изготовления на высшем уровне. Я влюблена в свою покупку. Спасибо за внимательное отношение и быструю доставку.</text>
+      <date>15 марта 2026</date>
+    </review>
+    <review id="2">
+      <author>Дмитрий Соколов</author>
+      <rating>5</rating>
+      <text>Купил обручальные кольца для свадьбы. Работа мастеров безупречна, каждая деталь продумана. Жена в восторге! Рекомендую всем.</text>
+      <date>8 марта 2026</date>
+    </review>
+    <review id="3">
+      <author>Екатерина Волкова</author>
+      <rating>5</rating>
+      <text>Серьги превзошли все ожидания. Элегантные, изящные, идеально подходят к вечернему образу. Получила множество комплиментов на вечеринке.</text>
+      <date>1 марта 2026</date>
+    </review>
+    <review id="4">
+      <author>Михаил Иванов</author>
+      <rating>5</rating>
+      <text>Отличный сервис и качество. Помогли с выбором подарка для жены, она была в восторге. Обязательно вернусь ещё.</text>
+      <date>22 февраля 2026</date>
+    </review>
+    <review id="5">
+      <author>Ольга Смирнова</author>
+      <rating>5</rating>
+      <text>Роскошное колье с жемчугом! Ношу его на все торжественные мероприятия. Качество и работа ювелира впечатляют. Очень довольна покупкой.</text>
+      <date>14 февраля 2026</date>
+    </review>
+    <review id="6">
+      <author>Александр Козлов</author>
+      <rating>5</rating>
+      <text>Приобрел кольцо с бриллиантом для помолвки. Невеста сказала «да»! Спасибо за такое прекрасное изделие и помощь в выборе.</text>
+      <date>8 февраля 2026</date>
+    </review>
+    <review id="7">
+      <author>Виктория Лебедева</author>
+      <rating>5</rating>
+      <text>Заказала серьги с барочным жемчугом — это просто произведение искусства. Каждая жемчужина уникальная, переливается всеми цветами радуги. Упаковка тоже шикарная, сразу чувствуется премиум-класс.</text>
+      <date>3 апреля 2026</date>
+    </review>
+    <review id="8">
+      <author>Наталья Морозова</author>
+      <rating>5</rating>
+      <text>Купила колье «Золотой сад» на юбилей. Получила огромное удовольствие от покупки — и от процесса выбора, и от самого украшения. Менеджер помог подобрать идеальный вариант. Уже планирую следующую покупку!</text>
+      <date>18 апреля 2026</date>
+    </review>
+    <review id="9">
+      <author>Сергей Орлов</author>
+      <rating>4</rating>
+      <text>Подарил жене серьги-медальоны на годовщину свадьбы. Она была поражена! Единственное — доставка заняла на день дольше обещанного, но украшение того стоило. Качество безупречное.</text>
+      <date>20 апреля 2026</date>
+    </review>
+    <review id="10">
+      <author>Марина Белова</author>
+      <rating>5</rating>
+      <text>Кольцо «Двойной жемчуг» — моя любимая покупка за этот год. Носится невероятно удобно, подходит к любому образу — от делового до вечернего. Получаю комплименты каждый день!</text>
+      <date>24 апреля 2026</date>
+    </review>
+  </reviews>
+</catalog>
