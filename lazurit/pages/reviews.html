@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы — ЛАЗУРИТ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Форма отзыва */
+    .review-form-box {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .star-rating {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+    .star-rating input { display: none; }
+    .star-rating label {
+      font-size: 28px;
+      color: var(--border);
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label { color: #1a1a1a; }
+    .review-new-badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--black);
+      color: #fff;
+      padding: 2px 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="logo" href="../index.html"><svg class="logo-gem" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+  <polygon points="12,2 20,8 20,16 12,22 4,16 4,8"/>
+  <polygon points="12,2 20,8 12,13 4,8"/>
+  <line x1="12" y1="13" x2="12" y2="22"/>
+  <line x1="4" y1="16" x2="12" y2="13"/>
+  <line x1="20" y1="16" x2="12" y2="13"/>
+</svg>ЛАЗУРИТ</a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="../index.html">ГЛАВНАЯ</a></li>
+          <li><a href="catalog.html">КАТАЛОГ</a></li>
+          <li><a href="reviews.html" class="active">ОТЗЫВЫ</a></li>
+          <li><a href="auth.html">ВОЙТИ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cart">
+        <a href="cart.html" class="cart-icon-btn" aria-label="Корзина">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <rect x="3" y="7" width="18" height="14" rx="1"/>
+  <polyline points="8,7 8,4 16,4 16,7"/>
+</svg>
+          <span class="js-cart-count cart-count"></span>
+        </a>
+      </div>
+      <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Мобильное меню">
+  <a href="../index.html">ГЛАВНАЯ</a>
+  <a href="catalog.html">КАТАЛОГ</a>
+  <a href="reviews.html" class="active">ОТЗЫВЫ</a>
+  <a href="auth.html">ВОЙТИ</a>
+  <a href="cart.html">КОРЗИНА</a>
+</nav>
+
+<main>
+
+  <section class="reviews-page-hero">
+    <div class="container">
+      <h1>Отзывы клиентов</h1>
+      <p>Что говорят о нас наши покупатели</p>
+    </div>
+  </section>
+
+  <!-- Сетка отзывов — заполняется из XML + localStorage -->
+  <section aria-label="Отзывы покупателей">
+    <div class="reviews-grid-2" id="reviews-grid" aria-live="polite">
+      <p style="padding:48px;color:var(--gray)">Загрузка отзывов…</p>
+    </div>
+  </section>
+
+  <!-- Форма добавления отзыва -->
+  <section class="write-review-block">
+    <div class="container">
+      <h2>Оставьте свой отзыв</h2>
+      <p>Мы ценим мнение каждого клиента и постоянно работаем над улучшением нашего сервиса</p>
+
+      <form class="review-form-box" id="review-form" novalidate>
+        <div class="form-group">
+          <label style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:6px">Ваше имя</label>
+          <input name="author" class="form-input" type="text" required placeholder="Имя Фамилия">
+        </div>
+
+        <!-- Выбор рейтинга звёздами -->
+        <div class="form-group">
+          <label style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:10px">Оценка</label>
+          <div class="star-rating">
+            <input type="radio" name="rating" id="r5" value="5" checked>
+            <label for="r5" title="5">★</label>
+            <input type="radio" name="rating" id="r4" value="4">
+            <label for="r4" title="4">★</label>
+            <input type="radio" name="rating" id="r3" value="3">
+            <label for="r3" title="3">★</label>
+            <input type="radio" name="rating" id="r2" value="2">
+            <label for="r2" title="2">★</label>
+            <input type="radio" name="rating" id="r1" value="1">
+            <label for="r1" title="1">★</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:6px">Ваш отзыв</label>
+          <textarea name="text" class="form-input" required rows="4"
+            placeholder="Расскажите о вашем опыте покупки…"
+            style="resize:vertical"></textarea>
+        </div>
+
+        <button class="btn" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo"><svg class="logo-gem" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+  <polygon points="12,2 20,8 20,16 12,22 4,16 4,8"/>
+  <polygon points="12,2 20,8 12,13 4,8"/>
+  <line x1="12" y1="13" x2="12" y2="22"/>
+  <line x1="4" y1="16" x2="12" y2="13"/>
+  <line x1="20" y1="16" x2="12" y2="13"/>
+</svg>ЛАЗУРИТ</span>
+        <p>Эксклюзивные ювелирные изделия премиум-класса для тех, кто ценит истинную красоту и качество.</p>
+      </div>
+      <nav class="footer-col"><p class="footer-col-title">Навигация</p><ul><li><a href="../index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="reviews.html">Отзывы</a></li><li><a href="cart.html">Корзина</a></li></ul></nav>
+      <div class="footer-col"><p class="footer-col-title">Контакты</p>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <rect x="5" y="2" width="14" height="20" rx="2"/>
+  <rect x="9" y="17" width="6" height="2" rx="1"/>
+</svg><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <rect x="2" y="5" width="20" height="14" rx="1"/>
+  <polyline points="2,5 12,14 22,5"/>
+</svg><a href="mailto:info@lazurit.ru">info@lazurit.ru</a></div>
+      </div>
+      <div class="footer-col"><p class="footer-col-title">Мы в соцсетях</p><div class="social-icons"><a href="#" class="social-icon" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a><a href="#" class="social-icon" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <rect x="2" y="2" width="20" height="20" rx="2"/>
+  <line x1="9" y1="12" x2="15" y2="12"/>
+  <line x1="12" y1="8" x2="12" y2="20"/>
+  <line x1="9" y1="8" x2="15" y2="8"/>
+</svg></a></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Лазурит. Все права защищены.</p><div class="footer-bottom-links"><a href="#">Политика конфиденциальности</a><a href="#">Условия использования</a></div></div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
